@@ -1,0 +1,703 @@
+/* ===================================================================
+ *  Sri Shyam Kulfi — brand overrides
+ * =================================================================== */
+
+:root {
+  --kulfi-saffron: #e87722;
+  --kulfi-saffron-deep: #c45f12;
+  --kulfi-cream: #fff6eb;
+  --kulfi-milk: #fffdf8;
+  --kulfi-cocoa: #2a1810;
+  --kulfi-ink: #1c140f;
+  --kulfi-wa: #25d366;
+  --kulfi-swiggy: #fc8019;
+  --kulfi-zomato: #e23744;
+}
+
+/* ---- header logo ---- */
+header .header-logo a {
+  width: 72px;
+  height: 72px;
+  background: none !important;
+  font: 0/0 a !important;
+  color: transparent !important;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+  border: 2px solid rgba(255, 255, 255, 0.85);
+}
+
+header .header-logo a img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 768px) {
+  header .header-logo a {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+/* ---- home hero: product photo slideshow ---- */
+#home {
+  background-image: none;
+  background-color: var(--kulfi-saffron-deep);
+  overflow: hidden;
+}
+
+.hero-slides {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1.06);
+  transition: opacity 1.4s ease, transform 6s ease;
+}
+
+.hero-slide.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+#home .overlay {
+  z-index: 1;
+  opacity: 1;
+  background: linear-gradient(
+    160deg,
+    rgba(42, 24, 16, 0.72) 0%,
+    rgba(196, 95, 18, 0.42) 45%,
+    rgba(42, 24, 16, 0.68) 100%
+  );
+}
+
+#home .home-content-table,
+#home .home-social-list,
+#home .scrolldown {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-logo {
+  display: block;
+  width: 148px;
+  height: 148px;
+  margin: 0 auto 2.4rem;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  animation: heroLogoFloat 4.5s ease-in-out infinite;
+}
+
+@keyframes heroLogoFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.home-content-tablecell h3 {
+  color: #ffd9a8;
+  letter-spacing: 0.18rem;
+  font-size: 1.6rem;
+  text-transform: none;
+}
+
+.home-content-tablecell h1 {
+  font-size: clamp(4.2rem, 9vw, 8.4rem);
+  line-height: 1.08;
+  text-shadow: 0 4px 28px rgba(0, 0, 0, 0.35);
+}
+
+.home-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+.home-cta .button {
+  margin: 0;
+}
+
+.home-cta .button:hover,
+.home-cta .button:focus {
+  background: var(--kulfi-saffron) !important;
+  border-color: var(--kulfi-saffron) !important;
+  color: #fff !important;
+}
+
+/* ---- about ---- */
+#about {
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(232, 119, 34, 0.12), transparent 50%),
+    radial-gradient(ellipse at 90% 80%, rgba(255, 200, 120, 0.2), transparent 45%),
+    var(--kulfi-milk);
+  padding: 10rem 0;
+  min-height: 0;
+  text-align: left;
+}
+
+#about .about-layout {
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+#about .about-photo {
+  padding: 0 2rem;
+  margin-bottom: 3rem;
+}
+
+#about .about-photo img {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 24px 60px rgba(42, 24, 16, 0.18);
+  transition: transform 0.6s ease;
+}
+
+#about .about-photo img:hover {
+  transform: scale(1.02);
+}
+
+#about .about-copy {
+  padding: 0 2rem;
+}
+
+#about h3 {
+  color: var(--kulfi-saffron-deep);
+  text-align: left;
+}
+
+#about h3::before {
+  margin: 0 0 2.4rem;
+  background-color: var(--kulfi-saffron);
+}
+
+#about span {
+  color: var(--kulfi-saffron-deep);
+}
+
+#about .lead {
+  font-size: clamp(2rem, 2.8vw, 2.8rem);
+  line-height: 1.5;
+  color: var(--kulfi-ink);
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.about-extra {
+  max-width: 520px;
+  margin: 2rem 0 0;
+  font-family: "librebaskerville-regular", serif;
+  font-size: 1.55rem;
+  line-height: 1.7;
+  color: #5a4638;
+}
+
+@media only screen and (max-width: 768px) {
+  #about {
+    text-align: center;
+    padding: 7rem 0;
+  }
+
+  #about h3 {
+    text-align: center;
+  }
+
+  #about h3::before {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #about .lead,
+  .about-extra {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ---- gallery ---- */
+#gallery {
+  background: var(--kulfi-cream);
+  padding: 9rem 0 8rem;
+}
+
+#gallery .section-intro h3 {
+  color: var(--kulfi-saffron-deep);
+}
+
+#gallery .section-intro h1 {
+  color: var(--kulfi-cocoa);
+}
+
+#gallery .section-intro .lead {
+  color: #5a4638;
+}
+
+.kulfi-gallery {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.kulfi-shot {
+  display: block;
+  position: relative;
+  margin-bottom: 3rem;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 16px 40px rgba(42, 24, 16, 0.14);
+  background: var(--kulfi-saffron);
+}
+
+.kulfi-shot img {
+  display: block;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  transition: transform 0.7s ease, filter 0.4s ease;
+}
+
+.kulfi-shot:hover img {
+  transform: scale(1.08);
+  filter: brightness(0.88);
+}
+
+.kulfi-shot__label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.6rem 1.8rem;
+  font-family: "montserrat-bold", sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  background: linear-gradient(transparent, rgba(42, 24, 16, 0.78));
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.kulfi-shot:hover .kulfi-shot__label {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.kulfi-gallery__featured {
+  float: none;
+  width: 100%;
+  clear: both;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.kulfi-shot--wide img {
+  height: 360px;
+}
+
+@media only screen and (max-width: 768px) {
+  .kulfi-shot img,
+  .kulfi-shot--wide img {
+    height: 240px;
+  }
+
+  .kulfi-shot__label {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---- order ---- */
+#order {
+  position: relative;
+  background-color: var(--kulfi-cocoa);
+  background-image:
+    linear-gradient(135deg, rgba(42, 24, 16, 0.72), rgba(196, 95, 18, 0.55)),
+    url(../images/Kulfi/Kulfi4.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 12rem 0 10rem;
+  color: #fff;
+}
+
+#order .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 10, 6, 0.35);
+}
+
+#order .gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20, 10, 6, 0.15), rgba(20, 10, 6, 0.55));
+}
+
+#order .section-intro,
+#order .order-content {
+  position: relative;
+  z-index: 2;
+}
+
+#order .section-intro h3 {
+  color: #ffd9a8;
+}
+
+#order .section-intro h1,
+#order .section-intro .lead {
+  color: #fff;
+}
+
+#order .with-bottom-sep::after {
+  background-color: var(--kulfi-saffron);
+}
+
+.order-content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.order-item {
+  text-align: center;
+  padding: 2.4rem 2rem;
+}
+
+.order-item .icon {
+  display: block;
+  margin-bottom: 1.8rem;
+}
+
+.order-item .icon i {
+  font-size: 4.2rem;
+  color: #ffd9a8;
+}
+
+.order-item .h05 {
+  color: #fff;
+}
+
+.order-item p {
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 2.4rem;
+}
+
+.order-btn {
+  display: inline-block;
+  border: none !important;
+  color: #fff !important;
+  font-family: "montserrat-bold", sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 1.2rem 2.4rem !important;
+  border-radius: 4px;
+  margin: 0.4rem;
+  transition: filter 0.25s ease, transform 0.25s ease;
+}
+
+.order-btn:hover,
+.order-btn:focus {
+  color: #fff !important;
+  filter: brightness(1.08);
+  transform: translateY(-2px);
+}
+
+.order-btn--wa { background: var(--kulfi-wa) !important; }
+.order-btn--swiggy { background: var(--kulfi-swiggy) !important; }
+.order-btn--zomato { background: var(--kulfi-zomato) !important; }
+
+/* ---- menu ---- */
+#menu {
+  background: var(--kulfi-cream);
+  padding-bottom: 6rem;
+}
+
+#menu .intro-wrap {
+  background: var(--kulfi-cocoa);
+  padding: 9rem 0 6rem;
+}
+
+#menu .section-intro h3 {
+  color: #ffd9a8;
+}
+
+#menu .section-intro h1,
+#menu .section-intro .lead {
+  color: #fff;
+}
+
+.menu-boards {
+  margin-top: -3rem;
+  margin-bottom: 4.8rem;
+  position: relative;
+  z-index: 2;
+}
+
+.menu-board {
+  display: block;
+  margin-bottom: 2.4rem;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 18px 40px rgba(42, 24, 16, 0.18);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.menu-board:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px rgba(42, 24, 16, 0.28);
+}
+
+.menu-board img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.menu-lists {
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+}
+
+.menu-category {
+  background: var(--kulfi-milk);
+  border-left: 4px solid var(--kulfi-saffron);
+  padding: 2.2rem 2.4rem;
+  margin-bottom: 2.4rem;
+  box-shadow: 0 8px 24px rgba(42, 24, 16, 0.06);
+}
+
+.menu-category h4 {
+  font-family: "montserrat-bold", sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--kulfi-cocoa);
+  margin-bottom: 1.4rem;
+  line-height: 1.4;
+}
+
+.menu-category h4 span {
+  display: block;
+  font-size: 1.2rem;
+  color: var(--kulfi-saffron-deep);
+  letter-spacing: 0.04em;
+  margin-top: 0.4rem;
+  text-transform: none;
+  font-family: "librebaskerville-regular", serif;
+}
+
+.menu-category ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-category li {
+  font-family: "librebaskerville-regular", serif;
+  font-size: 1.45rem;
+  line-height: 1.55;
+  color: #3d2c22;
+  padding: 0.55rem 0;
+  border-bottom: 1px dotted rgba(42, 24, 16, 0.12);
+}
+
+.menu-category li:last-child {
+  border-bottom: none;
+}
+
+.menu-category li em {
+  font-style: italic;
+  color: var(--kulfi-saffron-deep);
+  font-size: 0.9em;
+}
+
+.menu-category ul.priced li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.2rem;
+  align-items: baseline;
+}
+
+.menu-category ul.priced li span:last-child {
+  flex-shrink: 0;
+  font-family: "montserrat-bold", sans-serif;
+  font-size: 1.25rem;
+  color: var(--kulfi-saffron-deep);
+  white-space: nowrap;
+}
+
+.menu-order-bar {
+  text-align: center;
+  padding: 2rem 0 4rem;
+}
+
+.menu-order-bar p {
+  font-family: "montserrat-bold", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--kulfi-cocoa);
+  margin-bottom: 1.8rem;
+}
+
+/* ---- testimonials ---- */
+#testimonials {
+  background: linear-gradient(180deg, #fff 0%, var(--kulfi-cream) 100%);
+}
+
+#testimonials h2 {
+  color: var(--kulfi-cocoa);
+}
+
+#testimonials .flexslider .slides p {
+  color: var(--kulfi-ink);
+}
+
+#testimonials .author-info {
+  color: var(--kulfi-saffron-deep);
+}
+
+#testimonials .testimonial-author img {
+  display: none;
+}
+
+/* ---- contact ---- */
+#contact {
+  background-image:
+    linear-gradient(rgba(42, 24, 16, 0.78), rgba(42, 24, 16, 0.88)),
+    url(../images/Kulfi/Kulfi1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#contact a {
+  color: #ffd9a8;
+}
+
+#contact a:hover {
+  color: #fff;
+}
+
+.map-link {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  padding: 2.4rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  color: #fff !important;
+  margin-bottom: 2.4rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.map-link:hover {
+  background: rgba(232, 119, 34, 0.35);
+  color: #fff !important;
+  transform: translateY(-3px);
+}
+
+.map-link__icon {
+  font-size: 3.2rem;
+  color: var(--kulfi-saffron);
+}
+
+.map-link__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.map-link__text strong {
+  font-family: "montserrat-bold", sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.map-link__text small {
+  font-size: 1.35rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.contact-call {
+  border-color: rgba(255, 255, 255, 0.55) !important;
+  color: #fff !important;
+}
+
+.contact-call:hover {
+  background: #fff !important;
+  color: var(--kulfi-cocoa) !important;
+  border-color: #fff !important;
+}
+
+#contact .cinfo h6 {
+  color: #ffd9a8;
+}
+
+#contact .cinfo p {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* ---- footer ---- */
+footer {
+  background: #140c08;
+}
+
+footer .h05 {
+  color: #ffd9a8;
+}
+
+footer a.order-btn {
+  margin-top: 1rem;
+}
+
+.footer-bottom .copyright span {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.button.stroke:hover {
+  background: var(--kulfi-saffron) !important;
+  border-color: var(--kulfi-saffron) !important;
+}
+
+#go-top a {
+  background: var(--kulfi-saffron);
+}
+
+@media only screen and (max-width: 768px) {
+  #order {
+    padding: 9rem 0 7rem;
+  }
+
+  .menu-boards {
+    margin-top: -1.5rem;
+  }
+
+  .home-content-tablecell h3 {
+    font-size: 1.35rem;
+  }
+
+  .hero-logo {
+    width: 110px;
+    height: 110px;
+  }
+}
