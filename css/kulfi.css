@@ -326,7 +326,7 @@ header .header-logo a img {
   background-color: var(--kulfi-cocoa);
   background-image:
     linear-gradient(135deg, rgba(42, 24, 16, 0.72), rgba(196, 95, 18, 0.55)),
-    url(../images/Kulfi/Kulfi4.jpg);
+    url(/Kulfi4.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -576,7 +576,7 @@ header .header-logo a img {
 #contact {
   background-image:
     linear-gradient(rgba(42, 24, 16, 0.78), rgba(42, 24, 16, 0.88)),
-    url(../images/Kulfi/Kulfi1.jpg);
+    url(/Kulfi1.jpg);
   background-size: cover;
   background-position: center;
 }
