@@ -812,6 +812,103 @@ header .header-logo a img {
   color: rgba(255, 255, 255, 0.82);
 }
 
+/* Contact: always visible (no scroll-animation delay) */
+#contact .section-intro,
+#contact .contact-map-wrap,
+#contact .contact-info,
+#contact .contact-connect,
+#contact .connect-block {
+  opacity: 1 !important;
+}
+
+#contact .overlay {
+  pointer-events: none;
+  z-index: 0;
+}
+
+#contact .section-intro,
+#contact .contact-content,
+#contact .contact-connect {
+  position: relative;
+  z-index: 2;
+}
+
+#contact .contact-connect {
+  clear: both;
+  float: none;
+  width: 100%;
+  max-width: 780px;
+  margin: 4.8rem auto 0;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+#contact .contact-connect a {
+  pointer-events: auto;
+  position: relative;
+  z-index: 3;
+}
+
+#contact .contact-connect .col-twelve {
+  float: none !important;
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+#contact .connect-block {
+  margin: 0 auto;
+  max-width: 680px;
+}
+
+#contact .connect-block h3 {
+  font-family: "montserrat-bold", sans-serif;
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ffd9a8;
+  margin: 0 0 1rem;
+  text-align: center;
+}
+
+#contact .connect-block h6 {
+  font-family: "librebaskerville-regular", serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0 0 2.4rem;
+  text-align: center;
+}
+
+#contact .connect-block .connect-lead,
+#contact .connect-block p {
+  font-family: "librebaskerville-regular", serif;
+  font-size: 1.55rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0 0 1.6rem;
+  text-align: center;
+}
+
+#contact .connect-block p:last-child {
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  #contact .contact-connect {
+    margin-top: 3.6rem;
+    padding: 0 1.6rem;
+  }
+
+  #contact .connect-block h3 {
+    font-size: 1.8rem;
+  }
+
+  #contact .connect-block p {
+    font-size: 1.45rem;
+  }
+}
+
 /* ---- footer ---- */
 footer {
   background: #140c08;
