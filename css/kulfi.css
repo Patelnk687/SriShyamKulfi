@@ -142,6 +142,100 @@ header .header-logo a img {
   color: #fff !important;
 }
 
+.nav-promo {
+  display: none;
+}
+
+/* ---- promo (dated offer) ---- */
+#promo {
+  background: var(--kulfi-cream);
+  padding: 7.2rem 0 6.4rem;
+  text-align: center;
+}
+
+#promo .promo-wrap {
+  max-width: 440px;
+  width: min(440px, 92vw);
+  margin: 0 auto;
+  padding: 0 1.6rem;
+  box-sizing: border-box;
+}
+
+#promo .promo-header h3 {
+  font-family: "montserrat-bold", sans-serif;
+  font-size: clamp(1.6rem, 2.2vw, 2rem);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--kulfi-saffron-deep);
+  margin: 0 0 0.8rem;
+}
+
+#promo .promo-header p {
+  font-family: "librebaskerville-regular", serif;
+  font-size: 1.5rem;
+  color: #5a4638;
+  margin: 0 0 2.8rem;
+}
+
+#promo .promo-card {
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+  line-height: 0;
+  margin: 0 auto;
+  padding: 0.6rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 14px 32px rgba(42, 24, 16, 0.14);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+#promo .promo-card:hover,
+#promo .promo-card:focus {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(42, 24, 16, 0.2);
+}
+
+#promo .promo-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+#promo .promo-card object {
+  display: none;
+  width: 100%;
+  height: min(62vh, 560px);
+  border-radius: 6px;
+}
+
+#promo .promo-card.is-pdf img {
+  display: none;
+}
+
+#promo .promo-card.is-pdf object {
+  display: block;
+}
+
+@media only screen and (max-width: 600px) {
+  #promo {
+    padding: 5.6rem 0 5.2rem;
+  }
+
+  #promo .promo-wrap {
+    max-width: 320px;
+    width: min(320px, 90vw);
+    padding: 0 1.2rem;
+  }
+
+  #promo .promo-card.is-pdf object {
+    height: min(58vh, 420px);
+  }
+}
+
 /* ---- about ---- */
 #about {
   position: relative;
